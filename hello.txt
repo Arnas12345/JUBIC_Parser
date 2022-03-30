@@ -1,0 +1,16 @@
+BEGINnING.
+XXX XY-1.
+XXX Y.
+XXXX Z.
+XXXX XY.
+
+BODY.
+PRINT "Please enter a number? ".
+INPUT Y.
+
+MOVE Y TO Z.
+ADD Y TO Z.
+PRINT XY;" + ";Y;"=";Z.
+
+END.
+
