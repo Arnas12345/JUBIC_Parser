@@ -397,7 +397,7 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  5
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   49
+#define YYLAST   47
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  17
@@ -406,7 +406,7 @@ union yyalloc
 /* YYNRULES -- Number of rules.  */
 #define YYNRULES  30
 /* YYNRULES -- Number of states.  */
-#define YYNSTATES  59
+#define YYNSTATES  60
 
 /* YYTRANSLATE(YYLEX) -- Bison symbol number corresponding to YYLEX.  */
 #define YYUNDEFTOK  2
@@ -454,9 +454,9 @@ static const yytype_uint8 yytranslate[] =
 static const yytype_uint8 yyprhs[] =
 {
        0,     0,     3,     9,    12,    14,    17,    21,    24,    26,
-      29,    31,    33,    35,    37,    41,    43,    45,    49,    53,
-      57,    59,    62,    65,    67,    71,    75,    79,    83,    87,
-      91
+      29,    31,    33,    35,    37,    40,    43,    46,    50,    54,
+      58,    60,    63,    66,    68,    72,    76,    80,    84,    88,
+      92
 };
 
 /* YYRHS -- A `-1'-separated list of the rules' RHS.  */
@@ -465,13 +465,13 @@ static const yytype_int8 yyrhs[] =
       18,     0,    -1,    19,    20,    22,    23,    34,    -1,     3,
       12,    -1,    21,    -1,    21,    20,    -1,    14,    16,    12,
       -1,     4,    12,    -1,    24,    -1,    24,    23,    -1,    25,
-      -1,    27,    -1,    30,    -1,    32,    -1,     6,    26,    12,
-      -1,    13,    -1,    16,    -1,    13,    11,    26,    -1,    16,
-      11,    26,    -1,     8,    28,    12,    -1,    29,    -1,    29,
-      28,    -1,    16,    11,    -1,    16,    -1,     7,    31,    12,
-      -1,    15,    10,    16,    -1,    16,    10,    16,    -1,     9,
-      33,    12,    -1,    15,    10,    16,    -1,    16,    10,    16,
-      -1,     5,    12,    -1
+      -1,    27,    -1,    30,    -1,    32,    -1,     6,    26,    -1,
+      13,    12,    -1,    16,    12,    -1,    13,    11,    26,    -1,
+      16,    11,    26,    -1,     8,    28,    12,    -1,    29,    -1,
+      29,    28,    -1,    16,    11,    -1,    16,    -1,     7,    31,
+      12,    -1,    15,    10,    16,    -1,    16,    10,    16,    -1,
+       9,    33,    12,    -1,    15,    10,    16,    -1,    16,    10,
+      16,    -1,     5,    12,    -1
 };
 
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
@@ -521,7 +521,7 @@ static const yytype_uint8 yyr1[] =
 static const yytype_uint8 yyr2[] =
 {
        0,     2,     5,     2,     1,     2,     3,     2,     1,     2,
-       1,     1,     1,     1,     3,     1,     1,     3,     3,     3,
+       1,     1,     1,     1,     2,     2,     2,     3,     3,     3,
        1,     2,     2,     1,     3,     3,     3,     3,     3,     3,
        2
 };
@@ -533,10 +533,10 @@ static const yytype_uint8 yydefact[] =
 {
        0,     0,     0,     0,     3,     1,     0,     0,     4,     0,
        0,     0,     5,     6,     7,     0,     0,     0,     0,     0,
-       8,    10,    11,    12,    13,    15,    16,     0,     0,     0,
+       8,    10,    11,    12,    13,     0,     0,    14,     0,     0,
        0,    23,     0,    20,     0,     0,     0,     0,     2,     9,
-       0,     0,    14,     0,     0,    24,    22,    19,    21,     0,
-       0,    27,    30,    17,    18,    25,    26,    28,    29
+       0,    15,     0,    16,     0,     0,    24,    22,    19,    21,
+       0,     0,    27,    30,    17,    18,    25,    26,    28,    29
 };
 
 /* YYDEFGOTO[NTERM-NUM].  */
@@ -548,22 +548,22 @@ static const yytype_int8 yydefgoto[] =
 
 /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
    STATE-NUM.  */
-#define YYPACT_NINF -31
+#define YYPACT_NINF -35
 static const yytype_int8 yypact[] =
 {
-       9,     1,    14,     2,   -31,   -31,    -1,    13,     2,     6,
-       7,    -6,   -31,   -31,   -31,    -9,   -10,     4,    -7,    16,
-      -6,   -31,   -31,   -31,   -31,    11,    12,    15,    18,    19,
-      20,    22,    23,     4,    21,    24,    25,    26,   -31,   -31,
-      -9,    -9,   -31,     8,    10,   -31,   -31,   -31,   -31,    27,
-      28,   -31,   -31,   -31,   -31,   -31,   -31,   -31,   -31
+       2,     6,     9,     7,   -35,   -35,     4,    15,     7,    10,
+      11,    -6,   -35,   -35,   -35,    -9,    -5,     8,    -3,    20,
+      -6,   -35,   -35,   -35,   -35,     3,     5,   -35,    16,    17,
+      18,    21,    19,     8,    23,    24,    25,    26,   -35,   -35,
+      -9,   -35,    -9,   -35,    12,    13,   -35,   -35,   -35,   -35,
+      27,    28,   -35,   -35,   -35,   -35,   -35,   -35,   -35,   -35
 };
 
 /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -31,   -31,   -31,    17,   -31,   -31,    29,   -31,   -31,   -30,
-     -31,    -3,   -31,   -31,   -31,   -31,   -31,   -31
+     -35,   -35,   -35,    31,   -35,   -35,    22,   -35,   -35,   -34,
+     -35,    14,   -35,   -35,   -35,   -35,   -35,   -35
 };
 
 /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
@@ -572,26 +572,26 @@ static const yytype_int8 yypgoto[] =
 #define YYTABLE_NINF -1
 static const yytype_uint8 yytable[] =
 {
-      15,    16,    17,    18,    25,    28,    29,    26,    34,    35,
-      53,    54,     1,     4,     5,     9,     6,    10,    13,    14,
-      31,    37,    40,    41,    55,    12,    56,    42,    43,    44,
-      48,    49,    45,    46,    50,    47,     0,    51,    52,     0,
-       0,     0,     0,    57,    58,     0,     0,     0,     0,    39
+      15,    16,    17,    18,    25,     1,    54,    26,    55,     5,
+      28,    29,    34,    35,    40,    41,    42,    43,     4,    10,
+       9,     6,    13,    14,    31,    37,    44,    45,    56,    57,
+      46,    48,    47,    50,    51,     0,     0,    52,    53,    12,
+       0,     0,    39,    58,    59,     0,     0,    49
 };
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-31)))
+  (!!((Yystate) == (-35)))
 
 #define yytable_value_is_error(Yytable_value) \
   YYID (0)
 
 static const yytype_int8 yycheck[] =
 {
-       6,     7,     8,     9,    13,    15,    16,    16,    15,    16,
-      40,    41,     3,    12,     0,    16,    14,     4,    12,    12,
-      16,     5,    11,    11,    16,     8,    16,    12,    10,    10,
-      33,    10,    12,    11,    10,    12,    -1,    12,    12,    -1,
-      -1,    -1,    -1,    16,    16,    -1,    -1,    -1,    -1,    20
+       6,     7,     8,     9,    13,     3,    40,    16,    42,     0,
+      15,    16,    15,    16,    11,    12,    11,    12,    12,     4,
+      16,    14,    12,    12,    16,     5,    10,    10,    16,    16,
+      12,    12,    11,    10,    10,    -1,    -1,    12,    12,     8,
+      -1,    -1,    20,    16,    16,    -1,    -1,    33
 };
 
 /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
@@ -602,8 +602,8 @@ static const yytype_uint8 yystos[] =
        4,    22,    20,    12,    12,     6,     7,     8,     9,    23,
       24,    25,    27,    30,    32,    13,    16,    26,    15,    16,
       31,    16,    28,    29,    15,    16,    33,     5,    34,    23,
-      11,    11,    12,    10,    10,    12,    11,    12,    28,    10,
-      10,    12,    12,    26,    26,    16,    16,    16,    16
+      11,    12,    11,    12,    10,    10,    12,    11,    12,    28,
+      10,    10,    12,    12,    26,    26,    16,    16,    16,    16
 };
 
 #define yyerrok		(yyerrstatus = 0)
@@ -1406,7 +1406,7 @@ yyreduce:
         case 2:
 /* Line 1792 of yacc.c  */
 #line 30 "bison.y"
-    {printf("Is a valid Sentence!\n");}
+    {printf("Is a valid program!\n");}
     break;
 
   case 6:
@@ -1418,7 +1418,7 @@ yyreduce:
   case 16:
 /* Line 1792 of yacc.c  */
 #line 38 "bison.y"
-    {check_does_exist((yyvsp[(1) - (1)].chars));}
+    {check_does_exist((yyvsp[(1) - (2)].chars));}
     break;
 
   case 18:
@@ -1744,13 +1744,13 @@ void check_unique_identifier(char* chars, int identifierSize) {
 
 void check_does_exist(char* chars) {
 	int len = sizeof(identifiers)/sizeof(identifiers[0]);
-	if (chars[strlen(chars)-1] == '.') chars[strlen(chars)-1] = 0;
-	else if (strchr( chars, ';' )) {
-		chars = strtok(chars, ";");
-	}
-	else if (strchr( chars, ' ' )) {
-		chars = strtok(chars, " ");
-	}
+
+	for(int i = 0; i < strlen(chars); i++) {
+		char c = chars[i];
+		if(c == '.' || c == ';' || c ==' ') {
+			chars[i] = 0;
+		}
+	} 
 
 	for(int i = 0; i < len; ++i)
 	{
@@ -1760,7 +1760,7 @@ void check_does_exist(char* chars) {
 			
 		}
 	}
-	yyerror("Identifier doesn't exists");
+	yyerror("Identifier doesn't exist");
 	exit(0);
 }
 

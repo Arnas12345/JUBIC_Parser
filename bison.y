@@ -27,15 +27,15 @@ int identifierIteration = 0;
 %token <chars>  IDENTIFIER 
 
 %%
-sentence: beginning declarations body statements end {printf("Is a valid Sentence!\n");}
+sentence: beginning declarations body statements end {printf("Is a valid program!\n");}
 beginning: BEGINNING EOL
 declarations: declaration | declaration declarations 
 declaration : IDENTIFIERSIZE IDENTIFIER EOL {check_unique_identifier($2, $1);}
 body: BODY EOL
 statements: statement | statement statements
 statement: print | input | move | add
-print: PRINT string EOL
-string: STRING | IDENTIFIER {check_does_exist($1);}| STRING DELIMITER string | IDENTIFIER DELIMITER string {check_does_exist($1);}
+print: PRINT string
+string: STRING EOL | IDENTIFIER EOL {check_does_exist($1);} | STRING DELIMITER string | IDENTIFIER DELIMITER string {check_does_exist($1);}
 input: INPUT identifierList EOL
 identifierList: identifier | identifier identifierList
 identifier: IDENTIFIER DELIMITER {check_does_exist($1);} | IDENTIFIER {check_does_exist($1);}
@@ -90,13 +90,13 @@ void check_unique_identifier(char* chars, int identifierSize) {
 
 void check_does_exist(char* chars) {
 	int len = sizeof(identifiers)/sizeof(identifiers[0]);
-	if (chars[strlen(chars)-1] == '.') chars[strlen(chars)-1] = 0;
-	else if (strchr( chars, ';' )) {
-		chars = strtok(chars, ";");
-	}
-	else if (strchr( chars, ' ' )) {
-		chars = strtok(chars, " ");
-	}
+
+	for(int i = 0; i < strlen(chars); i++) {
+		char c = chars[i];
+		if(c == '.' || c == ';' || c ==' ') {
+			chars[i] = 0;
+		}
+	} 
 
 	for(int i = 0; i < len; ++i)
 	{
@@ -106,7 +106,7 @@ void check_does_exist(char* chars) {
 			
 		}
 	}
-	yyerror("Identifier doesn't exists");
+	yyerror("Identifier doesn't exist");
 	exit(0);
 }
 
